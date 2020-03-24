@@ -1,0 +1,9 @@
+[submodule "ProcessPlanningOntology-IOF"]
+	path = ProcessPlanningOntology-IOF
+	url = https://github.com/sormaz/ProcessPlanningOntology-IOF
+[submodule "Vocabularies"]
+	path = Vocabularies
+	url = https://github.com/InfoneerTXST/Vocabularies
+[submodule "IOF-maintenance-ontology"]
+	path = IOF-maintenance-ontology
+	url = https://github.com/uwasystemhealth/IOF-maintenance-ontology
