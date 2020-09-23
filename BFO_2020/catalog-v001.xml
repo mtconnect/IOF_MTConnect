@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="bfo-2020.owl"/>
-    <uri id="User Entered Import Resolution" name="urn://lmco.com/ontologies/2020/bfo-patch" uri="bfo-2020-patch.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology" uri="file:/Users/will/projects/MTConnect/Ontology/CommonCoreOntologies/AllCoreOntology.ttl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
-</catalog>
