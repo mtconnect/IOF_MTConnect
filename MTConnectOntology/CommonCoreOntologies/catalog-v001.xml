@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Import By Name Repository, directory=file:/Users/will/projects/SystemInsights/Lockheed/2020/Machines/, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="file:/Users/will/projects/SystemInsights/Lockheed/2020/Machines/">
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="duplicate:http://purl.obolibrary.org/obo/bfo.owl" uri="bfo-2020.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="duplicate:http://purl.obolibrary.org/obo/bfo.owl" uri="bfo-2020-without-some-all-times.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="duplicate:http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="bfo-2020.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="duplicate:http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="bfo-2020-without-some-all-times.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ModalRelationOntology" uri="ModalRelationshipOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ModalRelationOntology" uri="ModalRelationshipOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="http://www.ontologyrepository.com/CommonCoreOntologies/Upper/2019-12-20/ROImport" uri="ro-import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1592617149234" name="http://www.ontologyrepository.com/CommonCoreOntologies/Upper/ROImport" uri="ro-import.owl"/>
+    </group>
+    <uri id="Imports Wizard Entry" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ModalRelationOntology" uri="ModalRelationOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Upper/ROImport" uri="imports/ro-import.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology" uri="AgentOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology" uri="ArtifactOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology" uri="EventOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology" uri="ExtendedRelationOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/GeospatialOntology" uri="GeospatialOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology" uri="InformationEntityOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/QualityOntology" uri="QualityOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/TimeOntology" uri="TimeOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/UnitsOfMeasureOntology" uri="UnitsOfMeasureOntology.ttl"/>
+</catalog>
