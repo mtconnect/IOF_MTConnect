@@ -105,25 +105,25 @@ mtc:ProgramDesignativeName a owl:Class ;
     mtc:mtconnect_term "Program" .
 
 mtc:LinearDirectionDesignativeInformationContentEntity a owl:Class ;
-    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
     cco:definition "a designative informaiton content entity providing the direction of linear motion" ;
     rdfs:comment "Can be POSITIVE or NEGATIVE" ;    
     mtc:mtconnect_term "Linear Direction" .
 
 mtc:RotaryDirectionDesignativeInformationContentEntity a owl:Class ;
-    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;    
     cco:definition "a designative informaiton content entity providing the direction of rotational motion" ;
     rdfs:comment "Can be CLOCKWISE or COUNTER_CLOCKWISE" ;    
     mtc:mtconnect_term "Rotary Direction" .
     
 mtc:DoorStasisDesignativeInformationContentEntity a owl:Class ;
-    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
     cco:definition "a designative informaiton content providing the state of a door component" ;    
     rdfs:comment "can be Open, Closed, or Unlatched" ;    
     mtc:mtconnect_term "Door State" .
     
 mtc:ExecutionStasisDesignativeInformationContentEntity a owl:Class ;
-    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
     cco:definition "a designative informaiton content providing the state of control system related to the execution of a program" ;    
     rdfs:comment "can be Ready, Active, interrupted, Wait, Feed Hold, Stopped, Optional Stop, Program Stopped, ProgramCompleted" ;    
     mtc:mtconnect_term "Execution" .
