@@ -1,5 +1,5 @@
-@prefix : <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/observations#> .
-@prefix mtc: <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect#> .
+@prefix : <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/observations#> .
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect#> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,9 +8,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://schemas.mtconnect.org/ontologies/mtconnect/observations> a owl:Ontology ;
-    owl:versionIRI <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/systems> ;
-    owl:imports <http://schemas.mtconnect.org/ontologies/mtconnect/systems> ,
+<http://ontologies.mtconnect.org/ontologies/mtconnect/observations> a owl:Ontology ;
+    owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/observations> ;
+    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/systems> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
@@ -26,34 +26,34 @@ mtc:PositionMeasurementInformationContentEntity a owl:Class ;
     cco:definition "def. A distance measurement providing the measured or calculated position of a motion system as reported by a piece of equipment." ;    
     mtc:mtconnect_term "Position" .
     
-mtc:ActualPositionRatioMeasurementInformationContentEntity a owl:Class ;
+mtc:ActualPositionMeasurementInformationContentEntity a owl:Class ;
     cco:definition "def. The physical position of a motion system." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
     mtc:mtconnect_term "Actual Position" .
     
-mtc:ProgrammedPositionRatioMeasurementInformationContentEntity a owl:Class ;
+mtc:ProgrammedPositionMeasurementInformationContentEntity a owl:Class ;
     cco:definition "def. The control point position given by the motion system." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
     mtc:mtconnect_term "Programmed Position" .
     
-mtc:CommandedPositionRatioMeasurementInformationContentEntity a owl:Class ;
+mtc:CommandedPositionMeasurementInformationContentEntity a owl:Class ;
     cco:definition "def. The calculated position given by the control system." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
     mtc:mtconnect_term "Commanded Position" .
     
-mtc:TargetPositionRatioMeasurementInformationContentEntity a owl:Class ;
+mtc:TargetPositionMeasurementInformationContentEntity a owl:Class ;
     cco:definition "def. The desired end position of the control point." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
     mtc:mtconnect_term "Commanded Position" .
     
 
 mtc:PressureMeasurementInformationContentEntity a owl:Class ;
-    rdfs:subClassOf cco:DistanceMeasurementInformationContentEntity ;
+    rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
     cco:definition "def. A force per unit area of a gas or a liquid" ;
     mtc:mtconnect_term "Pressure" .
 
 mtc:RotaryVelocityMeasurementInformationContentEntity a owl:Class ;
-    rdfs:subClassOf cco:DistanceMeasurementInformationContentEntity ;
+    rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
     cco:definition "def. The rotational speed of rotary motion system" ;
     mtc:mtconnect_term "Rotary Velocity" .
 

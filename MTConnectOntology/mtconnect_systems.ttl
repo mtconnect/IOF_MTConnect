@@ -1,5 +1,5 @@
-@prefix : <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/systems#> .
-@prefix mtc: <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect#> .
+@prefix : <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/systems#> .
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect#> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,8 +8,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://schemas.mtconnect.org/ontologies/mtconnect/systems> a owl:Ontology ;
-    owl:versionIRI <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/systems> ;
+<http://ontologies.mtconnect.org/ontologies/mtconnect/systems> a owl:Ontology ;
+    owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/systems> ;
     owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
@@ -36,6 +36,10 @@ mtc:System a owl:Class ;
 mtc:ManufacturingArtifactFunction rdf:type owl:Class ;
     rdfs:subClassOf cco:ArtifactFunction .
     
+mtc:MTConnectCommunicationArtifactFunction rdf:type owl:Class ;
+    rdfs:subClassOf cco:CommunicationArtifactFunction ;
+    cco:definition "def. a communication artifact function using the MTConnect protocol and model" .
+    
 mtc:MTConnectDevice rdf:type owl:Class ;
     mtc:mtconnect_term "Device" ;
     cco:definition "def. object with a function is to communicate data using the MTConnect Specification from observations about itself, its components, and its assets to external entities, and has a manufacturing function" ;
@@ -43,7 +47,7 @@ mtc:MTConnectDevice rdf:type owl:Class ;
     owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000004
             [ rdf:type owl:Restriction ;
                 owl:onProperty obo:RO_0000085 ;
-                owl:someValuesFrom cco:CommunicationArtifactFunction
+                owl:someValuesFrom mtc:MTConnectCommunicationArtifactFunction
                 ]
             ) ;
         rdf:type owl:Class
@@ -51,7 +55,7 @@ mtc:MTConnectDevice rdf:type owl:Class ;
     rdfs:subClassOf obo:BFO_0000004 ,
         [ rdf:type owl:Restriction ;
         owl:onProperty obo:RO_0000085 ;
-        owl:someValuesFrom cco:CommunicationArtifactFunction
+        owl:someValuesFrom mtc:MTConnectCommunicationArtifactFunction
         ] .
 
 mtc:Machine rdf:type owl:Class ;
