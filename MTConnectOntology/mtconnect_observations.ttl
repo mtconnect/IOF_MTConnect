@@ -1,0 +1,154 @@
+@prefix : <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/observations#> .
+@prefix mtc: <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://schemas.mtconnect.org/ontologies/mtconnect/observations> a owl:Ontology ;
+    owl:versionIRI <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/systems> ;
+    owl:imports <http://schemas.mtconnect.org/ontologies/mtconnect/systems> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
+
+# We get mtconnect term from systems
+
+# Measurements
+
+mtc:PositionMeasurementInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DistanceMeasurementInformationContentEntity ;
+    cco:definition "def. A distance measurement providing the measured or calculated position of a motion system as reported by a piece of equipment." ;    
+    mtc:mtconnect_term "Position" .
+    
+mtc:ActualPositionRatioMeasurementInformationContentEntity a owl:Class ;
+    cco:definition "def. The physical position of a motion system." ;    
+    rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
+    mtc:mtconnect_term "Actual Position" .
+    
+mtc:ProgrammedPositionRatioMeasurementInformationContentEntity a owl:Class ;
+    cco:definition "def. The control point position given by the motion system." ;    
+    rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
+    mtc:mtconnect_term "Programmed Position" .
+    
+mtc:CommandedPositionRatioMeasurementInformationContentEntity a owl:Class ;
+    cco:definition "def. The calculated position given by the control system." ;    
+    rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
+    mtc:mtconnect_term "Commanded Position" .
+    
+mtc:TargetPositionRatioMeasurementInformationContentEntity a owl:Class ;
+    cco:definition "def. The desired end position of the control point." ;    
+    rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
+    mtc:mtconnect_term "Commanded Position" .
+    
+
+mtc:PressureMeasurementInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DistanceMeasurementInformationContentEntity ;
+    cco:definition "def. A force per unit area of a gas or a liquid" ;
+    mtc:mtconnect_term "Pressure" .
+
+mtc:RotaryVelocityMeasurementInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DistanceMeasurementInformationContentEntity ;
+    cco:definition "def. The rotational speed of rotary motion system" ;
+    mtc:mtconnect_term "Rotary Velocity" .
+
+
+# Modalities
+
+mtc:ModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DescriptiveInformationContentEntity ;
+    mtc:mtconnect_term "Event category with controlled vocabulary" ;
+    cco:definition "def. a descriptive information content entity that describes the stasis of a machine or system under the control on an external Agent" .
+
+mtc:ControllerModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ModalityInformationContentEntity ;
+    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect_term "Controller Mode" .
+    
+mtc:ControllerOverrideModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ControllerModalityInformationContentEntity ;
+    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect_term "Controller Mode Override" .
+
+mtc:DryRunControllerOverrideModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ControllerOverrideModalityInformationContentEntity ;
+    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect_term "Dry Run - Controller Mode Override" .
+
+mtc:OptionalStopControllerOverrideModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ControllerOverrideModalityInformationContentEntity ;
+    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect_term "Optional Stop - Controller Mode Override" .
+
+mtc:AxisFeedrateOverrideModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ModalityInformationContentEntity ;
+    cco:definition "A setting or operator selection that changes the behavior surface speed of a single motion system." ;    
+    mtc:mtconnect_term "Axis Feedrate Override" .
+
+mtc:PathFeedrateOverrideModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ModalityInformationContentEntity ;
+    cco:definition "A setting or operator selection that changes the behavior surface speed of the machine." ;    
+    mtc:mtconnect_term "Path Feedrate Override" .
+
+
+# Designations
+
+## Stasis and Names
+
+mtc:ProgramDesignativeName a owl:Class ;
+    rdfs:subClassOf cco:DesignativeName ;
+    mtc:mtconnect_term "Program" .
+
+mtc:LinearDirectionDesignativeInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    cco:definition "a designative informaiton content entity providing the direction of linear motion" ;
+    rdfs:comment "Can be POSITIVE or NEGATIVE" ;    
+    mtc:mtconnect_term "Linear Direction" .
+
+mtc:RotaryDirectionDesignativeInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    cco:definition "a designative informaiton content entity providing the direction of rotational motion" ;
+    rdfs:comment "Can be CLOCKWISE or COUNTER_CLOCKWISE" ;    
+    mtc:mtconnect_term "Rotary Direction" .
+    
+mtc:DoorStasisDesignativeInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    cco:definition "a designative informaiton content providing the state of a door component" ;    
+    rdfs:comment "can be Open, Closed, or Unlatched" ;    
+    mtc:mtconnect_term "Door State" .
+    
+mtc:ExecutionStasisDesignativeInformationContentEntity a owl:Class ;
+    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+    cco:definition "a designative informaiton content providing the state of control system related to the execution of a program" ;    
+    rdfs:comment "can be Ready, Active, interrupted, Wait, Feed Hold, Stopped, Optional Stop, Program Stopped, ProgramCompleted" ;    
+    mtc:mtconnect_term "Execution" .
+
+# Processes
+
+mtc:InformingProcess a owl:Class ;
+    rdfs:subClassOf cco:IntentionalAct ;
+    cco:definition "def. an intentional act of being informed about a stasis or modality" .
+
+mtc:StasisInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:InformingProcess ;
+    cco:definition "def. an informing process about the stasis of a independent continuent" .
+    
+mtc:MachineStasisInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:StasisInformingProcess ;
+    cco:definition "def. an informing process about the stasis of a machine" .
+    
+mtc:ProgramNameStasisInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:MachineStasisInformingProcess ;
+    cco:definition "def. an informing process about the stasis of the machine's program name" .
+
+mtc:MessageInformingProcess a owl:Class ;
+    rdfs:subClassOf cco:InformingProcess ;
+    cco:definition "def. an informing process about a message from the control system" .
+
+
+
