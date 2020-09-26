@@ -1,0 +1,275 @@
+@prefix : <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/systems#> .
+@prefix mtc: <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://schemas.mtconnect.org/ontologies/mtconnect/systems> a owl:Ontology ;
+    owl:versionIRI <http://schemas.mtconnect.org/ontologies/2020/06/mtconnect/systems> ;
+    owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
+
+
+# MTConnect annotation
+
+mtc:mtconnect_term rdf:type owl:AnnotationProperty ;
+    cco:definition "The term used in the mtconnect standard" ;
+    rdfs:label "mtconnect term"@en .
+
+
+# Machines
+
+mtc:System a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000027 ;
+    mtc:mtconnect_term "Component" ;
+    rdfs:comment "System will be subsumed by IOF once core is available" ;    
+    cco:definition "def. object aggregate whose member parts are causally integrated." .
+    
+
+mtc:ManufacturingArtifactFunction rdf:type owl:Class ;
+    rdfs:subClassOf cco:ArtifactFunction .
+    
+mtc:MTConnectDevice rdf:type owl:Class ;
+    mtc:mtconnect_term "Device" ;
+    cco:definition "def. object with a function is to communicate data using the MTConnect Specification from observations about itself, its components, and its assets to external entities, and has a manufacturing function" ;
+    rdfs:comment "Need to define the manufacturing process and other axioms. It can also be a system" ;    
+    owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000004
+            [ rdf:type owl:Restriction ;
+                owl:onProperty obo:RO_0000085 ;
+                owl:someValuesFrom cco:CommunicationArtifactFunction
+                ]
+            ) ;
+        rdf:type owl:Class
+        ] ;
+    rdfs:subClassOf obo:BFO_0000004 ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty obo:RO_0000085 ;
+        owl:someValuesFrom cco:CommunicationArtifactFunction
+        ] .
+
+mtc:Machine rdf:type owl:Class ;
+    rdfs:comment "Will be taken from IOF" ;    
+    rdfs:subClassOf cco:Artifact .
+
+
+mtc:ManufacturingMachine rdf:type owl:Class ;
+    rdfs:comment "Will be taken from IOF" ;    
+    owl:equivalentClass [ owl:intersectionOf ( mtc:Machine
+            [ rdf:type owl:Restriction ;
+                owl:onProperty obo:RO_0000085 ;
+                owl:someValuesFrom mtc:ManufacturingArtifactFunction
+                ]
+            ) ;
+        rdf:type owl:Class
+        ] ;
+    rdfs:subClassOf mtc:Machine ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty obo:RO_0000085 ;
+        owl:someValuesFrom mtc:ManufacturingArtifactFunction
+        ] .
+        
+# System definitions
+
+mtc:ControlSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Controller" ;    
+    cco:definition "def. a System that orchestrates the operation of the Machine." .
+
+# "has function" mtc:ControllingArtifactFunction
+
+mtc:PathControlSystem a owl:Class ;
+    rdfs:subClassOf mtc:ControlSystem ;
+    mtc:mtconnect_term "Controller" ;    
+    cco:definition "def. a Control System that is part of a Control System" .
+
+mtc:MotionSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Axis" ;    
+    cco:definition "def. a System that provides linear or rotary motion" .
+    
+mtc:LinearMotionSystem a owl:Class ;
+    rdfs:subClassOf mtc:MotionSystem ;
+    mtc:mtconnect_term "Linear" ;    
+    cco:definition "def. a System that provides linear motion" .
+    
+mtc:RotaryMotionSystem a owl:Class ;
+    rdfs:subClassOf mtc:MotionSystem ;
+    mtc:mtconnect_term "Linear" ;    
+    cco:definition "def. a System that provides linear motion" .
+
+# Should there be a special type of system for the following?
+
+mtc:HydraulicSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Hyrdaulic" ;    
+    cco:definition "def. a System that provides involved in moving and distributing pressurized liquid throughout the machine" .
+
+mtc:PneumaticSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Pneumatic" ;    
+    cco:definition "def. a system that moves and distributes pressurized gas throughout the Machine" .
+    
+mtc:CoolantSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Coolant" ;    
+    cco:definition "def. a system that moves and distributes pressurized gas throughout the Machine" .
+
+mtc:LubricationSystem  a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Lubrication" ;    
+    cco:definition "def. a sytem that distributes fluids used to lubricate the Machine" .
+
+mtc:ElectricSystem  a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Electric" ;    
+    cco:definition "def. a system that manages and distributes electricity throughout the machine" .
+
+mtc:ProtectiveSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Protective" ;    
+    cco:definition "def. a sytem that detects or prevents harm or damage to equipment or personnel" .
+    
+
+mtc:ProcessPowerSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "ProcessPower" ;    
+    cco:definition "def. a sytem that supplies energy to the manufacturing process separate from the Electric System" .
+    
+
+mtc:FeederSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Feeder" ;    
+    cco:definition "def. a sytem that that manages the delivery of materials within a Machine" .
+
+mtc:DielectricSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "Dielectric" ;    
+    cco:definition "def. a system that manages a chemical mixture used in a manufacturing process being performed" .
+
+mtc:EndEffectorSystem a owl:Class ;
+    rdfs:subClassOf mtc:System ;
+    mtc:mtconnect_term "EndEffector" ;    
+    cco:definition "def. a system that form the last link segment of a Machine" .
+    
+# Non-System MTConnect Components
+
+mtc:Enclosure a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000029 ; # obo:site
+    mtc:mtconnect_term "Enclosure" ;    
+    cco:definition "def. a site used to contain or isolate an portion of a machine" .
+
+
+# Could this be a subclass of an Enclosure?
+
+mtc:WorkEnvelopeSystem a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000029 ; # obo:site
+    mtc:mtconnect_term "Enclosure" ;    
+    cco:definition "def. a site used to contain or isolate physical process execution space" .
+
+
+# Auxiliary Systems
+
+mtc:AuxiliarySystem a owl:Class ;
+    rdfs:subClassOf mtc:System ; 
+    mtc:mtconnect_term "Auxiliaries" ;    
+    cco:definition "def. a systm  that provides supplementary or additional capabilities for the operation of a Machine" .
+    
+mtc:LoaderSystem a owl:Class ;
+    rdfs:subClassOf mtc:AuxiliarySystem ;
+    mtc:mtconnect_term "Loader" ;    
+    cco:definition "def. an auxiliary systm providing capabilities for moving and distributing materials and parts" .
+
+mtc:WasteDisposalSystem  a owl:Class ;
+    rdfs:subClassOf mtc:AuxiliarySystem ;
+    mtc:mtconnect_term "WasteDisposal" ;    
+    cco:definition "def. an auxiliary systm providing capabilities for removing manufacturing byproducts" .
+
+mtc:ToolingDeliverySystem a owl:Class ;
+    rdfs:subClassOf mtc:AuxiliarySystem ;
+    mtc:mtconnect_term "ToolingDelivery" ;    
+    cco:definition "def. an auxiliary systm providing capabilities to  manage, position, store, and deliver tooling" .
+
+mtc:EnvironmentalSystem a owl:Class ;
+    rdfs:subClassOf mtc:AuxiliarySystem ;
+    mtc:mtconnect_term "Environmental" ;    
+    cco:definition "def. an auxiliary systm  providing capabilities to  monitor and manage the environment around or within a machine" .
+
+mtc:SensorSystem a owl:Class ;
+    rdfs:subClassOf mtc:AuxiliarySystem ;
+    mtc:mtconnect_term "Sensor" ;    
+    cco:definition "def. an auxiliary systm  providing capabilities the collection of data as a response to a physical stimulus" .
+
+mtc:DepositionSystem a owl:Class ;
+    rdfs:subClassOf mtc:AuxiliarySystem ;
+    mtc:mtconnect_term "Deposition" ;    
+    cco:definition "def. an auxiliary systm providing the capability to add material or manage the state change of material in a manufacturing process" .
+
+# These need work
+
+mtc:Stock a owl:Class ;
+    rdfs:subClassOf cco:Artifact ;
+    mtc:mtconnect_term "Stock" ;    
+    cco:definition "def. an artifact that is used in a manufacturing process" .
+    
+mtc:Material a owl:Class ;
+    rdfs:subClassOf cco:Artifact ;
+    mtc:mtconnect_term "Materials" ;    
+    cco:definition "def. an artifact materials or other items consumed or used by the piece of equipment for production of parts, materials, or other types of goods" .
+
+mtc:Personnel a owl:Class ;
+    rdfs:subClassOf cco:GroupOfPersons ;
+    mtc:mtconnect_term "Personnel" ;    
+    cco:definition "def. a group of individuals who either control, support, or otherwise interface with a piece of equipment" .
+
+# Components
+
+mtc:Component a owl:Class ;
+    rdfs:subClassOf cco:Artifact ;
+    mtc:mtconnect_term "Composition" ;
+    cco:definition "def. an artifact that is a physical part of a machine " .
+    
+mtc:ActuatorComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "ACTUATOR" ;
+    cco:definition "def. a component for moving or controlling a mechanical part" .
+
+mtc:AmplifierComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "AMPLIFIER" ;
+    cco:definition "def. a component circuit for amplifying power, electric current, or voltage" .
+    
+mtc:BallscrewComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "BALLSCREW" ;
+    cco:definition "def. a component for transforming rotary motion into linear motion" .
+    
+mtc:BeltComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "BELT" ;
+    cco:definition "def. a component comprised of an endless flexible band used to transmit motion for a piece of equipment or to convey materials and objects." .
+
+mtc:BreakComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "BREAK" ;
+    cco:definition "def. a component comprised of a mechanism for slowing or stopping a moving object by the absorption or transfer of the energy of momentum, usually by means of friction, electrical force, or magnetic force" .
+
+mtc:DoorComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "DOOR" ;
+    cco:definition "def. a component comprised of a mechanical mechanism or closure that can cover a physical access portal into a piece of equipment allowing or restricting access" .
+
+mtc:TableComponent a owl:Class ;
+    rdfs:subClassOf mtc:Component ;
+    mtc:mtconnect_term "TABLE" ;
+    cco:definition "def. a component used for holding an object or matrial on a surface. " .    
+
+# Functions
+
+# Need to create functions for each of the systems.
