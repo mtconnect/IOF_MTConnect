@@ -131,8 +131,8 @@ mtc:ExecutionStasisDesignativeInformationContentEntity a owl:Class ;
 # Processes
 
 mtc:InformingProcess a owl:Class ;
-    rdfs:subClassOf cco:IntentionalAct ;
-    cco:definition "def. an intentional act of being informed about a stasis or modality" .
+    rdfs:subClassOf obo:BFO_0000015 ;
+    cco:definition "def. an process of being informed about a stasis or modality" .
 
 mtc:StasisInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:InformingProcess ;
