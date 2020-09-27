@@ -10,14 +10,12 @@
 
 <http://ontologies.mtconnect.org/ontologies/mtconnect/observations> a owl:Ontology ;
     owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/observations> ;
-    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/systems> ,
+    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
-
-# We get mtconnect term from systems
 
 # Measurements
 

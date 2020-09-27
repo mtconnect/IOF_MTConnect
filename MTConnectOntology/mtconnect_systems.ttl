@@ -10,74 +10,12 @@
 
 <http://ontologies.mtconnect.org/ontologies/mtconnect/systems> a owl:Ontology ;
     owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/systems> ;
-    owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
-
-
-# MTConnect annotation
-
-mtc:mtconnect_term rdf:type owl:AnnotationProperty ;
-    cco:definition "The term used in the mtconnect standard" ;
-    rdfs:label "mtconnect term"@en .
-
-
-# Machines
-
-mtc:System a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000027 ;
-    mtc:mtconnect_term "Component" ;
-    rdfs:comment "System will be subsumed by IOF once core is available" ;    
-    cco:definition "def. object aggregate whose member parts are causally integrated." .
-    
-
-mtc:ManufacturingArtifactFunction rdf:type owl:Class ;
-    rdfs:subClassOf cco:ArtifactFunction .
-    
-mtc:MTConnectCommunicationArtifactFunction rdf:type owl:Class ;
-    rdfs:subClassOf cco:CommunicationArtifactFunction ;
-    cco:definition "def. a communication artifact function using the MTConnect protocol and model" .
-    
-mtc:MTConnectDevice rdf:type owl:Class ;
-    mtc:mtconnect_term "Device" ;
-    cco:definition "def. object with a function is to communicate data using the MTConnect Specification from observations about itself, its components, and its assets to external entities, and has a manufacturing function" ;
-    rdfs:comment "Need to define the manufacturing process and other axioms. It can also be a system" ;    
-    owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000004
-            [ rdf:type owl:Restriction ;
-                owl:onProperty obo:RO_0000085 ;
-                owl:someValuesFrom mtc:MTConnectCommunicationArtifactFunction
-                ]
-            ) ;
-        rdf:type owl:Class
-        ] ;
-    rdfs:subClassOf obo:BFO_0000004 ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty obo:RO_0000085 ;
-        owl:someValuesFrom mtc:MTConnectCommunicationArtifactFunction
-        ] .
-
-mtc:Machine rdf:type owl:Class ;
-    rdfs:comment "Will be taken from IOF" ;    
-    rdfs:subClassOf cco:Artifact .
-
-
-mtc:ManufacturingMachine rdf:type owl:Class ;
-    rdfs:comment "Will be taken from IOF" ;    
-    owl:equivalentClass [ owl:intersectionOf ( mtc:Machine
-            [ rdf:type owl:Restriction ;
-                owl:onProperty obo:RO_0000085 ;
-                owl:someValuesFrom mtc:ManufacturingArtifactFunction
-                ]
-            ) ;
-        rdf:type owl:Class
-        ] ;
-    rdfs:subClassOf mtc:Machine ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty obo:RO_0000085 ;
-        owl:someValuesFrom mtc:ManufacturingArtifactFunction
-        ] .
         
 # System definitions
 
