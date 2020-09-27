@@ -17,6 +17,14 @@
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
 
+# Define an inferred class for Observation
+
+mtc:Observation a owl:Class ;
+    rdfs:subClassOf cco:InformationContentEntity ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty cco:is_output_of ;
+          owl:someValuesFrom mtc:InformingProcess ] .        
+
 # Measurements
 
 mtc:PositionMeasurementInformationContentEntity a owl:Class ;
@@ -145,8 +153,19 @@ mtc:ProgramNameStasisInformingProcess a owl:Class ;
     cco:definition "def. an informing process about the stasis of the machine's program name" .
 
 mtc:MessageInformingProcess a owl:Class ;
-    rdfs:subClassOf cco:InformingProcess ;
+    rdfs:subClassOf mtc:InformingProcess ;
     cco:definition "def. an informing process about a message from the control system" .
 
+mtc:MeasurementInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:InformingProcess ;
+    cco:definition "def. an informing process of measurement or reading from a sensor" .
+
+mtc:RatioMeasurementInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:MeasurementInformingProcess ;
+    cco:definition "def. an informing process of measurement or reading from a sensor" .
+
+mtc:NominalMeasurementInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:MeasurementInformingProcess ;
+    cco:definition "def. an informing process of measurement or reading from a sensor" .
 
 
