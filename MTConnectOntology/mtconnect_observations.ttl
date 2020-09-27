@@ -1,5 +1,5 @@
-@prefix : <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/observations#> .
-@prefix mtc: <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect#> .
+@prefix : <http://ontologies.mtconnect.org/ontologies/mtconnect/observations#> .
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/mtconnect#> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,6 +20,7 @@
 # Define an inferred class for Observation
 
 mtc:Observation a owl:Class ;
+    mtc:mtconnect_term "Observation" ;
     rdfs:subClassOf cco:InformationContentEntity ,
         [ rdf:type owl:Restriction ;
           owl:onProperty cco:is_output_of ;

@@ -1,5 +1,4 @@
-@prefix : <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/all#> .
-@prefix mtc: <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect#> .
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/mtconnect#> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
