@@ -145,6 +145,10 @@ mtc:StasisInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:InformingProcess ;
     cco:definition "def. an informing process about the stasis of a independent continuent" .
     
+mtc:ModalityInformingProcess a owl:Class ;
+    rdfs:subClassOf mtc:InformingProcess ;
+    cco:definition "def. an informing process about the stasis of a independent continuent" .
+    
 mtc:MachineStasisInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:StasisInformingProcess ;
     cco:definition "def. an informing process about the stasis of a machine" .
