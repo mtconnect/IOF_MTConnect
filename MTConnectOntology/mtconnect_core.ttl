@@ -10,7 +10,8 @@
 
 <http://ontologies.mtconnect.org/ontologies/mtconnect/core> a owl:Ontology ;
     owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/core> ;
-    owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+    owl:imports <urn:ontologies:2020:bfo-patch> ,
+    <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,

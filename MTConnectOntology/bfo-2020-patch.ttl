@@ -6,8 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://purl.obolibrary.org/obo/> .
 
-<urn://lmco.com/ontologies/bfo-patch> rdf:type owl:Ontology ;
-                                   owl:versionIRI <urn://lmco.com/ontologies/2020/bfo-patch> ;
+<urn:ontologies:bfo-patch> rdf:type owl:Ontology ;
+                                   owl:versionIRI <urn:ontologies:2020:bfo-patch> ;
                                    owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> ,
                                                <http://www.ontologyrepository.com/CommonCoreOntologies/Upper/ROImport> ,
                                                <http://www.ontologyrepository.com/CommonCoreOntologies/Upper/2019-12-20/ROImport> .
