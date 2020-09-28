@@ -164,7 +164,7 @@ mtc:Stock a owl:Class ;
 mtc:Material a owl:Class ;
     rdfs:subClassOf cco:Artifact ;
     mtc:mtconnect_term "Materials" ;    
-    cco:definition "def. an artifact materials or other items consumed or used by the piece of equipment for production of parts, materials, or other types of goods" .
+    cco:definition "def. an artifact consumed or used by the piece of equipment in the production of parts, materials, or other types of goods" .
 
 mtc:Personnel a owl:Class ;
     rdfs:subClassOf cco:GroupOfPersons ;
