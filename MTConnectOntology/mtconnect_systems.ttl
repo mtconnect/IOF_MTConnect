@@ -44,8 +44,8 @@ mtc:LinearMotionSystem a owl:Class ;
     
 mtc:RotaryMotionSystem a owl:Class ;
     rdfs:subClassOf mtc:MotionSystem ;
-    mtc:mtconnect_term "Linear" ;    
-    cco:definition "def. a System that provides linear motion" .
+    mtc:mtconnect_term "Rotary" ;    
+    cco:definition "def. a System that provides rotary motion" .
 
 # Should there be a special type of system for the following?
 
