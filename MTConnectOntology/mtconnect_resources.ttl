@@ -1,0 +1,47 @@
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/mtconnect#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#"> .
+@prefix iof: <http://www.industrialontologies.org/core#> .
+
+<http://ontologies.mtconnect.org/ontologies/mtconnect/resources> a owl:Ontology ;
+    owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/resources> ;
+    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> ,
+        <http://www.industrialontologies.org/core> .
+        
+# These need work
+
+mtc:PieceOfMaterial a owl:Class ;
+    rdfs:subClassOf cco:Artifact , iof:MaterialResource ;
+    mtc:mtconnect_term "Materials" ;    
+    rdfs:comment "needs work" ;
+    cco:definition "def. an artifact consumed or used by the piece of equipment in the production of parts, materials, or other types of goods" .
+
+mtc:PieceOfStock a owl:Class ;
+    rdfs:subClassOf mtc:PieceOfMaterial ;
+    mtc:mtconnect_term "Stock" ;
+    rdfs:comment "needs work" ;
+    cco:definition "def. piece of material that is used in a manufacturing process as a piece of raw material" .
+    
+mtc:CuttingTool a owl:Class ;
+    rdfs:subClassOf cco:Artifact ;
+    mtc:mtconnect_term "Materials" ;    
+    rdfs:comment "needs work" ;
+    cco:definition "def. an artifact used in a manufacturing process to remove material by shear forces"
+
+mtc:Personnel a owl:Class ;
+    rdfs:subClassOf cco:GroupOfPersons ;
+    mtc:mtconnect_term "Personnel" ;    
+    rdfs:comment "needs work" ;
+    cco:definition "def. a group of individuals who either control, support, or otherwise interface with a piece of equipment" .
+

@@ -1,19 +1,13 @@
-@prefix mtc: <http://ontologies.mtconnect.org/ontologies/mtconnect#> .
-@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
 <http://ontologies.mtconnect.org/ontologies/mtconnect/all> a owl:Ontology ;
     owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/all> ;
-    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
-        <http://ontologies.mtconnect.org/ontologies/mtconnect/systems> ,
-        <http://ontologies.mtconnect.org/ontologies/mtconnect/observations> ,
+    owl:imports 
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
-        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> ,
+        <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
+        <http://ontologies.mtconnect.org/ontologies/mtconnect/systems> ,
+        <http://ontologies.mtconnect.org/ontologies/mtconnect/observations> ,
+        <http://ontologies.mtconnect.org/ontologies/mtconnect/components> ,
+        <http://ontologies.mtconnect.org/ontologies/mtconnect/resources> .

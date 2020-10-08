@@ -1,0 +1,63 @@
+@prefix : <http://ontologies.mtconnect.org/ontologies/mtconnect/components#> .
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/mtconnect#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#"> .
+@prefix iof: <http://www.industrialontologies.org/core#> .
+
+<http://ontologies.mtconnect.org/ontologies/mtconnect/components> a owl:Ontology ;
+    owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/components> ;
+    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> ,
+        <http://www.industrialontologies.org/core> .
+        
+# Components
+
+mtc:MTConnectComponent a owl:Class ;
+    rdfs:subClassOf cco:Artifact , iof:Component ;
+    mtc:mtconnect_term "Composition" ;
+    cco:definition "def. an artifact that is a physical part of a machine " .
+    
+mtc:ActuatorComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "ACTUATOR" ;
+    cco:definition "def. a component for moving or controlling a mechanical part" .
+
+mtc:AmplifierComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "AMPLIFIER" ;
+    cco:definition "def. a component circuit for amplifying power, electric current, or voltage" .
+    
+mtc:BallscrewComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "BALLSCREW" ;
+    cco:definition "def. a component for transforming rotary motion into linear motion" .
+    
+mtc:BeltComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "BELT" ;
+    cco:definition "def. a component comprised of an endless flexible band used to transmit motion for a piece of equipment or to convey materials and objects." .
+
+mtc:BreakComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "BREAK" ;
+    cco:definition "def. a component comprised of a mechanism for slowing or stopping a moving object by the absorption or transfer of the energy of momentum, usually by means of friction, electrical force, or magnetic force" .
+
+mtc:DoorComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "DOOR" ;
+    cco:definition "def. a component comprised of a mechanical mechanism or closure that can cover a physical access portal into a piece of equipment allowing or restricting access" .
+
+mtc:TableComponent a owl:Class ;
+    rdfs:subClassOf mtc:MTConnectComponent ;
+    mtc:mtconnect_term "TABLE" ;
+    cco:definition "def. a component used for holding an object or matrial on a surface. " .    
