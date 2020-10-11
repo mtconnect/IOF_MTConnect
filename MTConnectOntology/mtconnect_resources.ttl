@@ -23,25 +23,25 @@
 
 mtc:PieceOfMaterial a owl:Class ;
     rdfs:subClassOf cco:Artifact , iof:MaterialResource ;
-    mtc:mtconnect_term "Materials" ;    
+    mtc:mtconnect-term "Materials" ;    
     rdfs:comment "needs work" ;
-    cco:definition "def. an artifact consumed or used by the piece of equipment in the production of parts, materials, or other types of goods" .
+    iof:definition-NL "def. an artifact consumed or used by the piece of equipment in the production of parts, materials, or other types of goods" .
 
 mtc:PieceOfStock a owl:Class ;
     rdfs:subClassOf mtc:PieceOfMaterial ;
-    mtc:mtconnect_term "Stock" ;
+    mtc:mtconnect-term "Stock" ;
     rdfs:comment "needs work" ;
-    cco:definition "def. piece of material that is used in a manufacturing process as a piece of raw material" .
+    iof:definition-NL "def. piece of material that is used in a manufacturing process as a piece of raw material" .
     
 mtc:CuttingTool a owl:Class ;
     rdfs:subClassOf cco:Artifact ;
-    mtc:mtconnect_term "Materials" ;    
+    mtc:mtconnect-term "Materials" ;    
     rdfs:comment "needs work" ;
-    cco:definition "def. an artifact used in a manufacturing process to remove material by shear forces"
+    iof:definition-NL "def. an artifact used in a manufacturing process to remove material by shear forces"
 
 mtc:Personnel a owl:Class ;
     rdfs:subClassOf cco:GroupOfPersons ;
-    mtc:mtconnect_term "Personnel" ;    
+    mtc:mtconnect-term "Personnel" ;    
     rdfs:comment "needs work" ;
-    cco:definition "def. a group of individuals who either control, support, or otherwise interface with a piece of equipment" .
+    iof:definition-NL "def. a group of individuals who either control, support, or otherwise interface with a piece of equipment" .
 

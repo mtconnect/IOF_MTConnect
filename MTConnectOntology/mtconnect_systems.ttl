@@ -23,139 +23,184 @@
 
 mtc:ControlSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Controller" ;    
-    cco:definition "def. a System that orchestrates the operation of the Machine." .
-
-# "has function" mtc:ControllingArtifactFunction
+    mtc:mtconnect-term "Controller" ;    
+    iof:definition-NL "def. a System that has a controlling artifact function." ;
+    iof:definition-NL "def. a System that orchestrates the operation of the Machine." .
 
 mtc:PathControlSystem a owl:Class ;
     rdfs:subClassOf mtc:ControlSystem ;
-    mtc:mtconnect_term "Controller" ;    
-    cco:definition "def. a Control System that is part of a Control System" .
+    mtc:mtconnect-term "Controller" ;    
+    iof:definition-NL "def. a System that has a controlling artifact function and is part of a control system" ; 
+    iof:definition-NL "def. a Control System that is part of a Control System" .
 
 mtc:MotionSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Axis" ;    
-    cco:definition "def. a System that provides linear or rotary motion" .
+    mtc:mtconnect-term "Axis" ;    
+    iof:definition-NL "def. a System that provides linear or rotary motion" .
     
 mtc:LinearMotionSystem a owl:Class ;
     rdfs:subClassOf mtc:MotionSystem ;
-    mtc:mtconnect_term "Linear" ;    
-    cco:definition "def. a System that provides linear motion" .
+    mtc:mtconnect-term "Linear" ;    
+    iof:definition-NL "def. a System that provides linear motion" .
     
 mtc:RotaryMotionSystem a owl:Class ;
     rdfs:subClassOf mtc:MotionSystem ;
-    mtc:mtconnect_term "Rotary" ;    
-    cco:definition "def. a System that provides rotary motion" .
+    mtc:mtconnect-term "Rotary" ;    
+    iof:definition-NL "def. a System that provides rotary motion" .
 
 # Should there be a special type of system for the following?
 
 mtc:HydraulicSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Hyrdaulic" ;    
-    cco:definition "def. a System that provides involved in moving and distributing pressurized liquid throughout the machine" .
+    mtc:mtconnect-term "Hyrdaulic" ;    
+    iof:definition-NL "def. a System that provides involved in moving and distributing pressurized liquid throughout the machine" ;
+    iof:definition-NL "alt. a system that realizes a fluid control artifact function" .    
+    
 
 mtc:PneumaticSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Pneumatic" ;    
-    cco:definition "def. a system that moves and distributes pressurized gas throughout the Machine" .
+    mtc:mtconnect-term "Pneumatic" ;    
+    iof:definition-NL "def. a system that moves and distributes pressurized gas throughout the Machine" .
     
 mtc:CoolantSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Coolant" ;    
-    cco:definition "def. a system that moves and distributes pressurized gas throughout the Machine" .
+    mtc:mtconnect-term "Coolant" ;    
+    iof:definition-NL "def. a system that moves and distributes pressurized gas throughout the Machine" .
 
 mtc:LubricationSystem  a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Lubrication" ;    
-    cco:definition "def. a sytem that distributes fluids used to lubricate the Machine" .
+    mtc:mtconnect-term "Lubrication" ;    
+    iof:definition-NL "def. a sytem that distributes fluids used to lubricate the Machine" ;
+    iof:definition-NL "alt. a system that realizes a friction reduction artifact function" .    
 
 mtc:ElectricSystem  a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Electric" ;    
-    cco:definition "def. a system that manages and distributes electricity throughout the machine" .
+    mtc:mtconnect-term "Electric" ;
+    iof:definition-NL "alt. a system that electrical artifact function" ;    
+    iof:definition-NL "def. a system that manages and distributes electricity throughout the machine" .
 
 mtc:ProtectiveSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Protective" ;    
-    cco:definition "def. a sytem that detects or prevents harm or damage to equipment or personnel" .
+    mtc:mtconnect-term "Protective" ;    
+    iof:definition-NL "def. a sytem that detects or prevents harm or damage to equipment or personnel" .
     
 
 mtc:ProcessPowerSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "ProcessPower" ;    
-    cco:definition "def. a sytem that supplies energy to the manufacturing process separate from the Electric System" .
+    mtc:mtconnect-term "ProcessPower" ;    
+    iof:definition-NL "def. a sytem that supplies energy to the manufacturing process separate from the Electric System" .
     
 
 mtc:FeederSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Feeder" ;    
-    cco:definition "def. a sytem that that manages the delivery of materials within a Machine" .
+    mtc:mtconnect-term "Feeder" ;    
+    iof:definition-NL "alt. a system that has a conveyance artifact function to deliver material into a machine" ;    
+    iof:definition-NL "def. a sytem that that manages the delivery of materials within a Machine" .
 
 mtc:DielectricSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "Dielectric" ;    
-    cco:definition "def. a system that manages a chemical mixture used in a manufacturing process being performed" .
+    mtc:mtconnect-term "Dielectric" ;
+    rdfs:comment "a system that manages a dielectric fluid used in a manufacturing process" ;    
+    iof:definition-NL "def. a system that manages a chemical mixture used in a manufacturing process" .
 
 mtc:EndEffectorSystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ;
-    mtc:mtconnect_term "EndEffector" ;    
-    cco:definition "def. a system that form the last link segment of a Machine" .
+    mtc:mtconnect-term "EndEffector" ;    
+    iof:definition-NL "def. a system that form the last link segment of a Machine" .
     
 # Non-System MTConnect Components
 
 mtc:Enclosure a owl:Class ;
     rdfs:subClassOf obo:BFO_0000029 ; # obo:site
-    mtc:mtconnect_term "Enclosure" ;    
-    cco:definition "def. a site used to contain or isolate an portion of a machine" .
+    mtc:mtconnect-term "Enclosure" ;    
+    iof:definition-NL "def. a site used to contain or isolate an portion of a machine" .
 
 
 # Could this be a subclass of an Enclosure?
 
 mtc:WorkEnvelopeSystem a owl:Class ;
     rdfs:subClassOf obo:BFO_0000029 ; # obo:site
-    mtc:mtconnect_term "Enclosure" ;    
-    cco:definition "def. a site used to contain or isolate physical process execution space" .
+    mtc:mtconnect-term "Enclosure" ;    
+    iof:definition-NL "def. a site used to contain or isolate physical process execution space" .
 
 
 # Auxiliary Systems
 
 mtc:AuxiliarySystem a owl:Class ;
     rdfs:subClassOf iof:EngineeredSystem ; 
-    mtc:mtconnect_term "Auxiliaries" ;    
-    cco:definition "def. a systm  that provides supplementary or additional capabilities for the operation of a Machine" .
+    mtc:mtconnect-term "Auxiliaries" ;    
+    iof:definition-NL "def. a systm  that provides supplementary or additional capabilities for the operation of a Machine" .
     
 mtc:LoaderSystem a owl:Class ;
     rdfs:subClassOf mtc:AuxiliarySystem ;
-    mtc:mtconnect_term "Loader" ;    
-    cco:definition "def. an auxiliary systm providing capabilities for moving and distributing materials and parts" .
+    mtc:mtconnect-term "Loader" ;    
+    iof:definition-NL "def. an auxiliary systm providing capabilities for moving and distributing materials and parts" .
 
 mtc:WasteDisposalSystem  a owl:Class ;
     rdfs:subClassOf mtc:AuxiliarySystem ;
-    mtc:mtconnect_term "WasteDisposal" ;    
-    cco:definition "def. an auxiliary systm providing capabilities for removing manufacturing byproducts" .
+    mtc:mtconnect-term "WasteDisposal" ;    
+    iof:definition-NL "def. an auxiliary systm providing capabilities for removing manufacturing byproducts" .
 
 mtc:ToolingDeliverySystem a owl:Class ;
     rdfs:subClassOf mtc:AuxiliarySystem ;
-    mtc:mtconnect_term "ToolingDelivery" ;    
-    cco:definition "def. an auxiliary systm providing capabilities to  manage, position, store, and deliver tooling" .
+    mtc:mtconnect-term "ToolingDelivery" ;    
+    iof:definition-NL "def. an auxiliary systm providing capabilities to  manage, position, store, and deliver tooling" .
 
 mtc:EnvironmentalSystem a owl:Class ;
     rdfs:subClassOf mtc:AuxiliarySystem ;
-    mtc:mtconnect_term "Environmental" ;    
-    cco:definition "def. an auxiliary systm  providing capabilities to  monitor and manage the environment around or within a machine" .
+    mtc:mtconnect-term "Environmental" ;
+    iof:definition-NL "alt. a system that has a senor artifact function to monitor the environment in the proximity of the machine" ;
+    iof:definition-NL "def. an auxiliary systm  providing capabilities to  monitor and manage the environment around or within a machine" .
 
 mtc:SensorSystem a owl:Class ;
     rdfs:subClassOf mtc:AuxiliarySystem ;
-    mtc:mtconnect_term "Sensor" ;    
-    cco:definition "def. an auxiliary systm  providing capabilities the collection of data as a response to a physical stimulus" .
+    mtc:mtconnect-term "Sensor" ;    
+    iof:definition-NL "alt. a system that has a senor artifact function to collect data from the piece of equipment" ;
+    iof:definition-NL "def. an auxiliary systm  providing capabilities the collection of data as a response to a physical stimulus" .
 
 mtc:DepositionSystem a owl:Class ;
     rdfs:subClassOf mtc:AuxiliarySystem ;
-    mtc:mtconnect_term "Deposition" ;    
-    cco:definition "def. an auxiliary systm providing the capability to add material or manage the state change of material in a manufacturing process" .
+    mtc:mtconnect-term "Deposition" ;    
+    iof:definition-NL "def. an auxiliary systm providing the capability to add material or manage the state change of material in a manufacturing process" .
 
 
 # Functions
 
-# Need to create functions for each of the systems.
+mtc:MotionArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:ArtifactFunction ;
+    owl:equivalentClass cco:MotionArtifactFunction ;
+    iof:definition-NL "def. An artifact function that is realized by the actuation of motion of a system or component of the macchine" .
+    
+mtc:LinearMotionArtifactFunction a owl:Class ;
+    rdfs:subClassOf mtc:MotionArtifactFunction ;
+    iof:definition-NL "def. An artifact function that is realized by the actuation of prismatic motion of a system or component of the macchine" .
+    
+mtc:RotaryMotionArtifactFunction a owl:Class ;
+    rdfs:subClassOf mtc:MotionArtifactFunction ;
+    iof:definition-NL "def. An artifact function that is realized by the actuation of rotary motion of a system or component of the macchine" .
+    
+mtc:ProcessPowerArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:PoweringArtifactFunction ;
+    iof:definition-NL "alt. a powering artifact function that is realized by supplying power to a manufacturing artifact for manufacturing" ;
+    iof:definition-NL "def. a artifact function that is realized by a process that uses electricty as part of a manufacturing process" .
+    
+mtc:DielectricFluidManagementArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:FluidControlArtifactFunction ;
+    iof:definition-NL "def. a fluid control management function that is realized by the dielectric fluid management in a manufacturing process" .
+    
+mtc:FeederArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:ArtifactFunction ;
+    iof:definition-NL "def. an artifact function that is realized to feed material during a manufacturing process" .
+
+mtc:ProtectionArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:ArtifactFunction ;
+    iof:definition-NL "def. an artifact function that is realized during a manufacturing process and protects agents and assets from harm or damage" .
+
+mtc:ControllingArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:ArtifactFunction ;
+    iof:definition-NL "def. an artifact function that is realized by a system when a piece of equipment is performing some controlled activity as part of a manufacturing process" .
+
+mtc:PneumaticArtifactFunction a owl:Class ;
+    rdfs:subClassOf cco:ArtifactFunction ;
+    iof:definition-NL "def. an artifact function that is realized when a system is actuating components using compressed gas" .
+    

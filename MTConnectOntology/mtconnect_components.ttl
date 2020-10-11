@@ -24,40 +24,51 @@
 
 mtc:MTConnectComponent a owl:Class ;
     rdfs:subClassOf cco:Artifact , iof:Component ;
-    mtc:mtconnect_term "Composition" ;
-    cco:definition "def. an artifact that is a physical part of a machine " .
+    owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
+            [ rdf:type owl:Restriction ;
+                owl:onProperty obo::BFO_0000177 ;
+                owl:someValuesFrom iof:EngineeredSystem
+                ]
+            ) ;
+        rdf:type owl:Class
+        ] ;    
+    mtc:mtconnect-term "Composition" ;
+    iof:definition-NL "def. an artifact that is a physical part of a machine " ;
+    iof:definition-NL "def. a material artifcat that is has a component role " ;
+    iof:definition-NL "def. a material artifact that is the proper part of an engineered system" .
+    
     
 mtc:ActuatorComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "ACTUATOR" ;
-    cco:definition "def. a component for moving or controlling a mechanical part" .
+    mtc:mtconnect-term "ACTUATOR" ;
+    iof:definition-NL "def. a component for moving or controlling a mechanical part" .
 
 mtc:AmplifierComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "AMPLIFIER" ;
-    cco:definition "def. a component circuit for amplifying power, electric current, or voltage" .
+    mtc:mtconnect-term "AMPLIFIER" ;
+    iof:definition-NL "def. a component circuit for amplifying power, electric current, or voltage" .
     
 mtc:BallscrewComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "BALLSCREW" ;
-    cco:definition "def. a component for transforming rotary motion into linear motion" .
+    mtc:mtconnect-term "BALLSCREW" ;
+    iof:definition-NL "def. a component for transforming rotary motion into linear motion" .
     
 mtc:BeltComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "BELT" ;
-    cco:definition "def. a component comprised of an endless flexible band used to transmit motion for a piece of equipment or to convey materials and objects." .
+    mtc:mtconnect-term "BELT" ;
+    iof:definition-NL "def. a component comprised of an endless flexible band used to transmit motion for a piece of equipment or to convey materials and objects." .
 
 mtc:BreakComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "BREAK" ;
-    cco:definition "def. a component comprised of a mechanism for slowing or stopping a moving object by the absorption or transfer of the energy of momentum, usually by means of friction, electrical force, or magnetic force" .
+    mtc:mtconnect-term "BREAK" ;
+    iof:definition-NL "def. a component comprised of a mechanism for slowing or stopping a moving object by the absorption or transfer of the energy of momentum, usually by means of friction, electrical force, or magnetic force" .
 
 mtc:DoorComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "DOOR" ;
-    cco:definition "def. a component comprised of a mechanical mechanism or closure that can cover a physical access portal into a piece of equipment allowing or restricting access" .
+    mtc:mtconnect-term "DOOR" ;
+    iof:definition-NL "def. a component comprised of a mechanical mechanism or closure that can cover a physical access portal into a piece of equipment allowing or restricting access" .
 
 mtc:TableComponent a owl:Class ;
     rdfs:subClassOf mtc:MTConnectComponent ;
-    mtc:mtconnect_term "TABLE" ;
-    cco:definition "def. a component used for holding an object or matrial on a surface. " .    
+    mtc:mtconnect-term "TABLE" ;
+    iof:definition-NL "def. a component used for holding an object or matrial on a surface. " .    

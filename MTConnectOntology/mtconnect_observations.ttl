@@ -8,6 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#"> .
+@prefix iof: <http://www.industrialontologies.org/core#> .
 
 <http://ontologies.mtconnect.org/ontologies/mtconnect/observations> a owl:Ontology ;
     owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/observations> ;
@@ -21,7 +22,8 @@
 # Define an inferred class for Observation
 
 mtc:Observation a owl:Class ;
-    mtc:mtconnect_term "Observation" ;
+    mtc:mtconnect-term "Observation" ;
+    iof:definition-NL "def. an observation is the an information content entity that is the output of an informing procecss" ;    
     rdfs:subClassOf cco:InformationContentEntity ,
         [ rdf:type owl:Restriction ;
           owl:onProperty cco:is_output_of ;
@@ -31,77 +33,77 @@ mtc:Observation a owl:Class ;
 
 mtc:PositionMeasurementInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:DistanceMeasurementInformationContentEntity ;
-    cco:definition "def. A distance measurement providing the measured or calculated position of a motion system as reported by a piece of equipment." ;    
-    mtc:mtconnect_term "Position" .
+    iof:definition-NL "def. A distance measurement providing the measured or calculated position of a motion system as reported by a piece of equipment." ;    
+    mtc:mtconnect-term "Position" .
     
 mtc:ActualPositionMeasurementInformationContentEntity a owl:Class ;
-    cco:definition "def. The physical position of a motion system." ;    
+    iof:definition-NL "def. The physical position of a motion system." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
-    mtc:mtconnect_term "Actual Position" .
+    mtc:mtconnect-term "Actual Position" .
     
 mtc:ProgrammedPositionMeasurementInformationContentEntity a owl:Class ;
-    cco:definition "def. The control point position given by the motion system." ;    
+    iof:definition-NL "def. The control point position given by the motion system." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
-    mtc:mtconnect_term "Programmed Position" .
+    mtc:mtconnect-term "Programmed Position" .
     
 mtc:CommandedPositionMeasurementInformationContentEntity a owl:Class ;
-    cco:definition "def. The calculated position given by the control system." ;    
+    iof:definition-NL "def. The calculated position given by the control system." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
-    mtc:mtconnect_term "Commanded Position" .
+    mtc:mtconnect-term "Commanded Position" .
     
 mtc:TargetPositionMeasurementInformationContentEntity a owl:Class ;
-    cco:definition "def. The desired end position of the control point." ;    
+    iof:definition-NL "def. The desired end position of the control point." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
-    mtc:mtconnect_term "Commanded Position" .
+    mtc:mtconnect-term "Commanded Position" .
     
 
 mtc:PressureMeasurementInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
-    cco:definition "def. A force per unit area of a gas or a liquid" ;
-    mtc:mtconnect_term "Pressure" .
+    iof:definition-NL "def. A force per unit area of a gas or a liquid" ;
+    mtc:mtconnect-term "Pressure" .
 
 mtc:RotaryVelocityMeasurementInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
-    cco:definition "def. The rotational speed of rotary motion system" ;
-    mtc:mtconnect_term "Rotary Velocity" .
+    iof:definition-NL "def. The rotational speed of rotary motion system" ;
+    mtc:mtconnect-term "Rotary Velocity" .
 
 
 # Modalities
 
 mtc:ModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:DescriptiveInformationContentEntity ;
-    mtc:mtconnect_term "Event category with controlled vocabulary" ;
-    cco:definition "def. a descriptive information content entity that describes the stasis of a machine or system under the control on an external Agent" .
+    mtc:mtconnect-term "Event category with controlled vocabulary" ;
+    iof:definition-NL "def. a descriptive information content entity that describes the stasis of a machine or system under the control on an external Agent" .
 
 mtc:ControllerModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ModalityInformationContentEntity ;
-    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
-    mtc:mtconnect_term "Controller Mode" .
+    iof:definition-NL "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect-term "Controller Mode" .
     
 mtc:ControllerOverrideModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ControllerModalityInformationContentEntity ;
-    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
-    mtc:mtconnect_term "Controller Mode Override" .
+    iof:definition-NL "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect-term "Controller Mode Override" .
 
 mtc:DryRunControllerOverrideModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ControllerOverrideModalityInformationContentEntity ;
-    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
-    mtc:mtconnect_term "Dry Run - Controller Mode Override" .
+    iof:definition-NL "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect-term "Dry Run - Controller Mode Override" .
 
 mtc:OptionalStopControllerOverrideModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ControllerOverrideModalityInformationContentEntity ;
-    cco:definition "A setting or operator selection that changes the behavior of a piece of equipment." ;    
-    mtc:mtconnect_term "Optional Stop - Controller Mode Override" .
+    iof:definition-NL "A setting or operator selection that changes the behavior of a piece of equipment." ;    
+    mtc:mtconnect-term "Optional Stop - Controller Mode Override" .
 
 mtc:AxisFeedrateOverrideModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ModalityInformationContentEntity ;
-    cco:definition "A setting or operator selection that changes the behavior surface speed of a single motion system." ;    
-    mtc:mtconnect_term "Axis Feedrate Override" .
+    iof:definition-NL "A setting or operator selection that changes the behavior surface speed of a single motion system." ;    
+    mtc:mtconnect-term "Axis Feedrate Override" .
 
 mtc:PathFeedrateOverrideModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ModalityInformationContentEntity ;
-    cco:definition "A setting or operator selection that changes the behavior surface speed of the machine." ;    
-    mtc:mtconnect_term "Path Feedrate Override" .
+    iof:definition-NL "A setting or operator selection that changes the behavior surface speed of the machine." ;    
+    mtc:mtconnect-term "Path Feedrate Override" .
 
 
 # Designations
@@ -110,72 +112,104 @@ mtc:PathFeedrateOverrideModalityInformationContentEntity a owl:Class ;
 
 mtc:ProgramDesignativeName a owl:Class ;
     rdfs:subClassOf cco:DesignativeName ;
-    mtc:mtconnect_term "Program" .
+    mtc:mtconnect-term "Program" .
 
 mtc:LinearDirectionDesignativeInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
-    cco:definition "a designative informaiton content entity providing the direction of linear motion" ;
+    iof:definition-NL "a designative informaiton content entity providing the direction of linear motion" ;
     rdfs:comment "Can be POSITIVE or NEGATIVE" ;    
-    mtc:mtconnect_term "Linear Direction" .
+    mtc:mtconnect-term "Linear Direction" .
 
 mtc:RotaryDirectionDesignativeInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;    
-    cco:definition "a designative informaiton content entity providing the direction of rotational motion" ;
+    iof:definition-NL "a designative informaiton content entity providing the direction of rotational motion" ;
     rdfs:comment "Can be CLOCKWISE or COUNTER_CLOCKWISE" ;    
-    mtc:mtconnect_term "Rotary Direction" .
-    
+    mtc:mtconnect-term "Rotary Direction" .
+
+mtc:ClockwiseRotaryDirection  a owl:NamedIndividual , mtc:RotaryDirectionDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "CLOCKWISE" ;
+    iof:definition-NL "Clockwise rotation" .    
+
+mtc:CounterClockwiseRotaryDirection  a owl:NamedIndividual , mtc:RotaryDirectionDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "COUNTER_CLOCKWISE" ;
+    iof:definition-NL "Clockwise rotation" .    
+
 mtc:DoorStasisDesignativeInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
-    cco:definition "a designative informaiton content providing the state of a door component" ;    
+    iof:definition-NL "a designative informaiton content providing the state of a door component" ;    
     rdfs:comment "can be Open, Closed, or Unlatched" ;    
-    mtc:mtconnect_term "Door State" .
+    mtc:mtconnect-term "Door State" .
+
+mtc:OpenDoorStasis  a owl:NamedIndividual , mtc:DoorStasisDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "OPEN" ;
+    iof:definition-NL "The stasis of a door when it is open" .
+    
+mtc:ClosedDoorStasis  a owl:NamedIndividual , mtc:DoorStasisDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "CLOSED" ;
+    iof:definition-NL "The stasis of a door when it is closed" .
+    
+mtc:UnlatchedDoorStasis  a owl:NamedIndividual , mtc:DoorStasisDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "UNLATCHED" ;
+    iof:definition-NL "The stasis of a door when it is neither open or closed" .
+    
     
 mtc:ExecutionStasisDesignativeInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
-    cco:definition "a designative informaiton content providing the state of control system related to the execution of a program" ;    
+    iof:definition-NL "a designative informaiton content providing the state of control system related to the execution of a program" ;    
     rdfs:comment "can be Ready, Active, interrupted, Wait, Feed Hold, Stopped, Optional Stop, Program Stopped, ProgramCompleted" ;    
-    mtc:mtconnect_term "Execution" .
+    mtc:mtconnect-term "Execution" .
 
-# Processes
+mtc:ActiveExecutionStasis a owl:NamedIndividual , mtc:ExecutionStasisDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "ACTIVE" ;
+    iof:definition-NL "The stasis output of the active exection of a process " ;
+    iof:definition-NL "The stasis of a machine when it is actively executing a process" .
+    
+mtc:ReadyExecutionStasis a owl:NamedIndividual , mtc:ExecutionStasisDesignativeInformationContentEntity ;
+    mtc:mtconnect-term "READY" ;
+    iof:definition-NL "The stasis output of the ready for the exection of a process " ;
+    iof:definition-NL "The stasis of a machine when it is ready to execute a process" .
+    
+
+# Informing Processes
 
 mtc:InformingProcess a owl:Class ;
     rdfs:subClassOf obo:BFO_0000015 ;
-    cco:definition "def. an process of being informed about a stasis or modality" .
+    iof:definition-NL "def. an process of being informed about a stasis or modality" .
 
 mtc:StasisInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:InformingProcess ;
-    cco:definition "def. an informing process about the stasis of a independent continuent" .
+    iof:definition-NL "def. an informing process about the stasis of a independent continuent" .
     
 mtc:ModalityInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:InformingProcess ;
-    cco:definition "def. an informing process about the modality of a system" .
+    iof:definition-NL "def. an informing process about the modality of a system" .
     
 mtc:ControlSystemModalityInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:ModalityInformingProcess ;
-    cco:definition "def. an informing process about the stasis of a control system" .
+    iof:definition-NL "def. an informing process about the stasis of a control system" .
     
 mtc:MachineStasisInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:StasisInformingProcess ;
-    cco:definition "def. an informing process about the stasis of a machine" .
+    iof:definition-NL "def. an informing process about the stasis of a machine" .
     
 mtc:ProgramNameStasisInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:MachineStasisInformingProcess ;
-    cco:definition "def. an informing process about the stasis of the machine's program name" .
+    iof:definition-NL "def. an informing process about the stasis of the machine's program name" .
 
 mtc:MessageInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:InformingProcess ;
-    cco:definition "def. an informing process about a message from the control system" .
+    iof:definition-NL "def. an informing process about a message from the control system" .
 
 mtc:MeasurementInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:InformingProcess ;
-    cco:definition "def. an informing process of measurement or reading from a sensor" .
+    iof:definition-NL "def. an informing process of measurement or reading from a sensor" .
 
 mtc:RatioMeasurementInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:MeasurementInformingProcess ;
-    cco:definition "def. an informing process of measurement or reading from a sensor" .
+    iof:definition-NL "def. an informing process of measurement or reading from a sensor" .
 
 mtc:NominalMeasurementInformingProcess a owl:Class ;
     rdfs:subClassOf mtc:MeasurementInformingProcess ;
-    cco:definition "def. an informing process of measurement or reading from a sensor" .
+    iof:definition-NL "def. an informing process of measurement or reading from a sensor" .
 
 
