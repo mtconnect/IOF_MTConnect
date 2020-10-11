@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/observations" uri="mtconnect_observations.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/resources" uri="mtconnect_resources.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/components" uri="mtconnect_components.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.industrialontologies.org/core" uri="IOF.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="bfo-2020.owl"/>
+    <uri id="User Entered Import Resolution" name="urn:ontologies:2020:bfo-patch" uri="bfo-2020-patch.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/core" uri="mtconnect_core.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology" uri="CommonCoreOntologies/UnitsOfMeasureOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology" uri="CommonCoreOntologies/QualityOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology" uri="CommonCoreOntologies/EventOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology" uri="CommonCoreOntologies/ArtifactOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology" uri="CommonCoreOntologies/AgentOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/systems" uri="mtconnect_systems.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://schemas.mtconnect.org/ontologies/mtconnect/systems" uri="mtconnect_systems.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1601156602637" name="http://lmco.com/ontologies/2020/4/untitled-ontology-76" uri="CommonCoreOntologies/CCO%20Import.owl"/>
+    </group>
+</catalog>
