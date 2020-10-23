@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/qualities" uri="mtconnect_qualities.ttl"/>
     <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/observations" uri="mtconnect_observations.ttl"/>
     <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/resources" uri="mtconnect_resources.ttl"/>
     <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/components" uri="mtconnect_components.ttl"/>

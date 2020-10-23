@@ -20,10 +20,10 @@
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> ,
         <http://www.industrialontologies.org/core> .
         
-# Components
+# Components, should this be iof:MaterialArtifact?
 
 mtc:MTConnectComponent a owl:Class ;
-    rdfs:subClassOf cco:Artifact , iof:Component ;
+    rdfs:subClassOf cco:MaterialArtifact , iof:Component ;
     owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
             [ rdf:type owl:Restriction ;
                 owl:onProperty obo::BFO_0000177 ;

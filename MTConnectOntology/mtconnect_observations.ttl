@@ -104,7 +104,11 @@ mtc:PathFeedrateOverrideModalityInformationContentEntity a owl:Class ;
     rdfs:subClassOf mtc:ModalityInformationContentEntity ;
     iof:definition-NL "A setting or operator selection that changes the behavior surface speed of the machine." ;    
     mtc:mtconnect-term "Path Feedrate Override" .
-
+    
+mtc:RotaryVelocityOverrideModalityInformationContentEntity a owl:Class ;
+    rdfs:subClassOf mtc:ModalityInformationContentEntity ;
+    iof:definition-NL "A setting or operator selection that changes the behavior rotational velocity of the rotary motion system." ;    
+    mtc:mtconnect-term "Rotary Velocity Override" .
 
 # Designations
 
@@ -123,7 +127,7 @@ mtc:LinearDirectionDesignativeInformationContentEntity a owl:Class ;
 mtc:RotaryDirectionDesignativeInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;    
     iof:definition-NL "a designative informaiton content entity providing the direction of rotational motion" ;
-    rdfs:comment "Can be CLOCKWISE or COUNTER_CLOCKWISE" ;    
+    rdfs:comment "Can be Clockwise or Counter Clockwise Rotation" ;    
     mtc:mtconnect-term "Rotary Direction" .
 
 mtc:ClockwiseRotaryDirection  a owl:NamedIndividual , mtc:RotaryDirectionDesignativeInformationContentEntity ;

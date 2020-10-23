@@ -38,7 +38,7 @@ mtc:MTConnectCommunicationArtifactFunction rdf:type owl:Class ;
     
 mtc:MTConnectDevice rdf:type owl:Class ;
     mtc:mtconnect-term "Device" ;
-    iof:definition-NL "def. object with a function to communicate data using the MTConnect Specification from observations about itself, its components, and its assets to external entities, and has a manufacturing function" ;
+    iof:definition-NL "def. an object with a function to communicate data using the MTConnect Specification participating in processes that produce observations about itself, its components, and its assets to external entities, and has a manufacturing function" ;
     rdfs:comment "Need to define the manufacturing process and other axioms. It can also be a system" ;    
     owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000004
             [ rdf:type owl:Restriction ;

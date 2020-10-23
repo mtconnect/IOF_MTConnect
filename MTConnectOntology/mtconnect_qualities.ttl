@@ -1,0 +1,88 @@
+@prefix : <http://ontologies.mtconnect.org/ontologies/mtconnect/qualities#> .
+@prefix mtc: <http://ontologies.mtconnect.org/ontologies/mtconnect#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#"> .
+@prefix iof: <http://www.industrialontologies.org/core#> .
+
+<http://ontologies.mtconnect.org/ontologies/mtconnect/qualities> a owl:Ontology ;
+    owl:versionIRI <http://ontologies.mtconnect.org/ontologies/2020/06/mtconnect/qualities> ;
+    owl:imports <http://ontologies.mtconnect.org/ontologies/mtconnect/core> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/AgentOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/QualityOntology> ,
+        <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> .
+
+# Qualities of systems and components
+
+## Measurement Qualities
+
+mtc:LinearPosition a owl:Class ;
+    mtc:mtconnect-term "Position" ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of relative position along an axis of the bearer" .
+    
+mtc:RotaryAngle a owl:Class ;
+    mtc:mtconnect-term "Angle" ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of a relative angle around an axis of the bearer" .
+
+mtc:Pressure a owl:Class ;
+    mtc:mtconnect-term "Pressure" ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of a force per unit area of a gas or liquid upon the bearer" .
+
+mtc:RotaryVelocity a owl:Class ;
+    mtc:mtconnect-term "RotaryVelocity" ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of a rotational speed around an axis of the bearer" .
+
+## Modality Qualities
+
+mtc:ControllerModality a owl:Class ;
+    mtc:mtconnect-term "Controller Mode" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the operation mode of the bearer" ;
+    rdfs:comment "can be Autmatic, Manual, Manual Data Input, Edit" ;    
+    rdfs:subClassOf obo:BFO_0000019 .
+
+mtc:ControllerOverrideModality a owl:Class ;
+    mtc:mtconnect-term "ControllerOverride" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the modification to the operational mode of the bearer" ;
+    rdfs:subClassOf obo:BFO_0000019 .
+    
+mtc:PathFeedrateOverride a owl:Class ;
+    mtc:mtconnect-term "PathFeedrateOverride" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the modification to the surface velocity of the bearer relative to the workpiece" ;
+    rdfs:subClassOf obo:BFO_0000019 .
+
+mtc:AxisFeedrateOverride a owl:Class ;
+    mtc:mtconnect-term "AxisFeedrateOverride" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the modification to the axial velocity of the bearer" ;
+    rdfs:subClassOf obo:BFO_0000019 .
+
+mtc:RotaryVelocityOverride a owl:Class ;
+    mtc:mtconnect-term "RotaryVelocityOverride" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the modification to the rotational velocity of the bearer" ;
+    rdfs:subClassOf obo:BFO_0000019 .
+
+
+## Stasis Qualities
+
+mtc:ExecutionStasis a owl:Class ;
+    mtc:mtconnect-term "Execution" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the execution stasis of the bearer" ;
+    rdfs:comment "can be Ready, Active, interrupted, Wait, Feed Hold, Stopped, Optional Stop, Program Stopped, ProgramCompleted" ;    
+    rdfs:subClassOf obo:BFO_0000019 .
+
+mtc:DoorStasis a owl:Class ;
+    mtc:mtconnect-term "DoorState" ;
+    iof:definition-NL "def. a quality that inheres in a bearer in virtue of the door stasis of the bearer" ;
+    rdfs:comment "can be Open, Closed, or Unlatched" ;    
+    rdfs:subClassOf obo:BFO_0000019 .
+

@@ -166,16 +166,20 @@ mtc:DepositionSystem a owl:Class ;
 
 # Functions
 
-mtc:MotionArtifactFunction a owl:Class ;
-    rdfs:subClassOf cco:ArtifactFunction ;
+mtc:SystemFunction a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000034 ;
+    iof:definition-NL "def. A Function that inheres in some System in virtue of that System being designed to be used in processes that require that Function to be realized. " .
+    
+mtc:MotionSystemFunction a owl:Class ;
+    rdfs:subClassOf mtc:SystemFunction ;    
     owl:equivalentClass cco:MotionArtifactFunction ;
     iof:definition-NL "def. An artifact function that is realized by the actuation of motion of a system or component of the macchine" .
     
-mtc:LinearMotionArtifactFunction a owl:Class ;
+mtc:LinearMotionSystemFunction a owl:Class ;
     rdfs:subClassOf mtc:MotionArtifactFunction ;
     iof:definition-NL "def. An artifact function that is realized by the actuation of prismatic motion of a system or component of the macchine" .
     
-mtc:RotaryMotionArtifactFunction a owl:Class ;
+mtc:RotaryMotionSystemFunction a owl:Class ;
     rdfs:subClassOf mtc:MotionArtifactFunction ;
     iof:definition-NL "def. An artifact function that is realized by the actuation of rotary motion of a system or component of the macchine" .
     
@@ -188,19 +192,19 @@ mtc:DielectricFluidManagementArtifactFunction a owl:Class ;
     rdfs:subClassOf cco:FluidControlArtifactFunction ;
     iof:definition-NL "def. a fluid control management function that is realized by the dielectric fluid management in a manufacturing process" .
     
-mtc:FeederArtifactFunction a owl:Class ;
-    rdfs:subClassOf cco:ArtifactFunction ;
+mtc:FeederSystemFunction a owl:Class ;
+    rdfs:subClassOf mtc:SystemFunction ;
     iof:definition-NL "def. an artifact function that is realized to feed material during a manufacturing process" .
 
-mtc:ProtectionArtifactFunction a owl:Class ;
-    rdfs:subClassOf cco:ArtifactFunction ;
+mtc:ProtectionSystemFunction a owl:Class ;
+    rdfs:subClassOf mtc:SystemFunction ;
     iof:definition-NL "def. an artifact function that is realized during a manufacturing process and protects agents and assets from harm or damage" .
 
-mtc:ControllingArtifactFunction a owl:Class ;
-    rdfs:subClassOf cco:ArtifactFunction ;
+mtc:ControllingSystemFunction a owl:Class ;
+    rdfs:subClassOf mtc:SystemFunction ;
     iof:definition-NL "def. an artifact function that is realized by a system when a piece of equipment is performing some controlled activity as part of a manufacturing process" .
 
-mtc:PneumaticArtifactFunction a owl:Class ;
-    rdfs:subClassOf cco:ArtifactFunction ;
+mtc:PneumaticSystemFunction a owl:Class ;
+    rdfs:subClassOf mtc:SystemFunction ;
     iof:definition-NL "def. an artifact function that is realized when a system is actuating components using compressed gas" .
     

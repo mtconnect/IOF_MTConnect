@@ -10,4 +10,5 @@
         <http://ontologies.mtconnect.org/ontologies/mtconnect/systems> ,
         <http://ontologies.mtconnect.org/ontologies/mtconnect/observations> ,
         <http://ontologies.mtconnect.org/ontologies/mtconnect/components> ,
+        <http://ontologies.mtconnect.org/ontologies/mtconnect/qualities> ,
         <http://ontologies.mtconnect.org/ontologies/mtconnect/resources> .
