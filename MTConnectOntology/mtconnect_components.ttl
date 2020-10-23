@@ -33,9 +33,7 @@ mtc:MTConnectComponent a owl:Class ;
         rdf:type owl:Class
         ] ;
     mtc:mtconnect-term "Composition" ;
-    iof:definition-NL "def. an artifact that is a physical part of a machine " ;
-    iof:definition-NL "def. a material artifcat that is has a component role " ;
-    iof:definition-NL "def. a material artifact that is the proper part of an engineered system" .
+    iof:definition-NL "def. an object that is the proper part of an engineered system or a material entity that has a component role" .
     
     
 mtc:ActuatorComponent a owl:Class ;
