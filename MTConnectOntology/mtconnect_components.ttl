@@ -23,15 +23,15 @@
 # Components, should this be iof:MaterialArtifact?
 
 mtc:MTConnectComponent a owl:Class ;
-    rdfs:subClassOf cco:MaterialArtifact , iof:Component ;
-    owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
+    rdfs:subClassOf cco:Artifact, iof:Component ;
+    owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000030
             [ rdf:type owl:Restriction ;
-                owl:onProperty obo::BFO_0000177 ;
+                owl:onProperty obo:BFO_0000177 ;
                 owl:someValuesFrom iof:EngineeredSystem
                 ]
             ) ;
         rdf:type owl:Class
-        ] ;    
+        ] ;
     mtc:mtconnect-term "Composition" ;
     iof:definition-NL "def. an artifact that is a physical part of a machine " ;
     iof:definition-NL "def. a material artifcat that is has a component role " ;
