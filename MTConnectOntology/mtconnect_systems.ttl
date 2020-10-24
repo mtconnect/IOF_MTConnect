@@ -176,11 +176,11 @@ mtc:MotionSystemFunction a owl:Class ;
     iof:definition-NL "def. An artifact function that is realized by the actuation of motion of a system or component of the macchine" .
     
 mtc:LinearMotionSystemFunction a owl:Class ;
-    rdfs:subClassOf mtc:MotionArtifactFunction ;
+    rdfs:subClassOf mtc:MotionSystemFunction ;
     iof:definition-NL "def. An artifact function that is realized by the actuation of prismatic motion of a system or component of the macchine" .
     
 mtc:RotaryMotionSystemFunction a owl:Class ;
-    rdfs:subClassOf mtc:MotionArtifactFunction ;
+    rdfs:subClassOf mtc:MotionSystemFunction ;
     iof:definition-NL "def. An artifact function that is realized by the actuation of rotary motion of a system or component of the macchine" .
     
 mtc:ProcessPowerArtifactFunction a owl:Class ;

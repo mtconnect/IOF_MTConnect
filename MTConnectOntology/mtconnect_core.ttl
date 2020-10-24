@@ -27,6 +27,12 @@ mtc:mtconnect-term rdf:type owl:AnnotationProperty ;
     rdfs:label "mtconnect term"@en .
 
 
+# Identifiers
+
+mtc:UniqueIdentifier a owl:Class ;
+    rdfs:subClassOf cco:ArbitraryIdentifier ;
+    iof:definition-NL "def. An arbitrary identifier that uniquely identifies an entity" .    
+
 # Machines
 
 mtc:ManufacturingArtifactFunction rdf:type owl:Class ;
