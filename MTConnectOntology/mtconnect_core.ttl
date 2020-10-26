@@ -31,7 +31,19 @@ mtc:mtconnect-term rdf:type owl:AnnotationProperty ;
 
 mtc:UniqueIdentifier a owl:Class ;
     rdfs:subClassOf cco:ArbitraryIdentifier ;
-    iof:definition-NL "def. An arbitrary identifier that uniquely identifies an entity" .    
+    mtc:mtconnect-term "id" ;
+    iof:definition-NL "def. An arbitrary identifier that uniquely identifies an entity within a particular context" .
+
+mtc:GloballyUniqueIdentifier a owl:Class ;
+    rdfs:subClassOf cco:ArbitraryIdentifier ;
+    mtc:mtconnect-term "uuid" ;
+    iof:definition-NL "def. An arbitrary identifier that uniquely identifies an entity within a context of all other entities" .
+
+mtc:ContinuantName a owl:Class ;
+    rdfs:subClassOf cco:ArtifactIdentifier ;
+    mtc:mtconnect-term "name" ;
+    iof:definition-NL "def. An arbitrary human readable identifier" .
+    
 
 # Machines
 
