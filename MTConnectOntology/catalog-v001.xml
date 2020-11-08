@@ -16,6 +16,7 @@
     <uri id="User Entered Import Resolution" name="http://ontologies.mtconnect.org/ontologies/mtconnect/systems" uri="mtconnect_systems.ttl"/>
     <uri id="User Entered Import Resolution" name="http://schemas.mtconnect.org/ontologies/mtconnect/systems" uri="mtconnect_systems.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1601156602637" name="http://lmco.com/ontologies/2020/4/untitled-ontology-76" uri="CommonCoreOntologies/CCO%20Import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1604797133550" name="http://lmco.com/ontologies/2020/4/untitled-ontology-76" uri="CommonCoreOntologies/CCO%20Import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1604797133550" name="http://lmco.com/ontologies/2020/9/untitled-ontology-186" uri="ccm-import.owl"/>
     </group>
 </catalog>

@@ -20,6 +20,8 @@
         <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/UnitsOfMeasureOntology> ,
         <http://www.industrialontologies.org/core> .
 
+# IOF Event used by various changes in modality
+
 # MTConnect annotation
 
 mtc:mtconnect-term rdf:type owl:AnnotationProperty ;

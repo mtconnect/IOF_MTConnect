@@ -217,3 +217,95 @@ mtc:NominalMeasurementInformingProcess a owl:Class ;
     iof:definition-NL "def. an informing process of measurement or reading from a sensor" .
 
 
+# Changes in Modality and Stasis
+
+mtc:ActOfModalityChange a owl:Class ;
+    rdfs:subClassOf cco:IntentionalAct ;
+    iof:definition-NL "def. An intentional act in which an agent changes the operational stasis of a continuant given by a information content entity" .
+
+
+mtc:ProcessStasisTransition a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000035 ;
+    iof:definition-NL "def. An process boundary where the an operational stasis of a continuant is transitioned to a new stasis." .
+
+mtc:OperationalStasis a owl:Class ;
+    rdfs:subClassOf cco:Stasis ;
+    iof:definition-NL "def. An operational stasis is a stasis where the continuant may only realize certain functions" .
+    
+mtc:ControlSystemOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:OperationalStasis ;    
+    iof:definition-NL "def. an operational stasis of a control system" .
+
+mtc:ManualControlSytemOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:ControlSystemOperationalStasis ;
+    iof:definition-NL "def. an control syatem operational stasis where an agent is the cause of an act of motion (movement)" .
+    
+mtc:AutomaticControlSytemOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:ControlSystemOperationalStasis ;
+    iof:definition-NL "def. an control syatem operational stasis where a directive ICE is the cause of an act of motion (movement)" .
+
+mtc:ExecutionOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:OperationalStasis ;
+    iof:definition-NL "def. an operational stasis in which some control system is idle or performs an activity" .
+    
+mtc:ActiveExecutionOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:OperationalStasis ;
+    mtc:mtconnect-term "ACTIVE" ;    
+    iof:definition-NL "def. an operational stasis in which some control system is active" .
+    
+mtc:ReadyExecutionOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:OperationalStasis ;
+    mtc:mtconnect-term "READY" ;    
+    iof:definition-NL "def. an operational stasis in which some control system is inactive and ready to begin operation" .
+    
+mtc:StoppedExecutionOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:OperationalStasis ;    
+    mtc:mtconnect-term "STOPPED" ;    
+    iof:definition-NL "def. an operational stasis in which some control system is inactive and ready to restart operation" .
+    
+mtc:PausedExecutionOperationalStasis a owl:Class ;
+    rdfs:subClassOf mtc:OperationalStasis ;
+    mtc:mtconnect-term "FEEDHOLD" ;    
+    iof:definition-NL "def. an operational stasis in which some control system is inactive and ready to continue operation" .
+
+# Process Profiles
+
+mtc:PathFeedrate a owl:Class ;
+    rdfs:subClassOf cco:CurvilinearMotion ;
+    mtc:mtconnect-term "PATH_FEEDRATE" ;    
+    iof:definition-NL "def. a translation motion along a multi-axial path at a given rate" .
+    
+mtc:AxisFeedrate a owl:Class ;
+    rdfs:subClassOf cco:RectilinearMotion ;
+    mtc:mtconnect-term "AXIS_FEEDRATE" ;    
+    iof:definition-NL "def. a translation motion along a single-axial path at a given rate" .
+    
+mtc:RotaryVelocity a owl:Class ;
+    rdfs:subClassOf cco:SpinningMotion ;
+    iof:definition-NL "def. a spinning motion of an motion system" .
+    
+mtc:LinearPosition a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000144 ;
+    mtc:mtconnect-term "POSITION" ;    
+    iof:definition-NL "def. a process profile representing the position along a rectilinear axis" .
+    
+mtc:ActualLinearPosition a owl:Class ;
+    rdfs:subClassOf mtc:LinearPosition ;
+    mtc:mtconnect-term "POSITION:ACTUAL" ;    
+    iof:definition-NL "def. a process profile of the position along a rectilinear axis as reported by sensors" .    
+    
+mtc:ProgrammedLinearPosition a owl:Class ;
+    rdfs:subClassOf mtc:LinearPosition ;
+    mtc:mtconnect-term "POSITION:PROGRAMMED" ;    
+    iof:definition-NL "def. a process profile representing the directive position along a rectilinear axis" .
+    
+mtc:AngularPosition a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000144 ;
+    mtc:mtconnect-term "Angle" ;    
+    iof:definition-NL "def. a process profile representing the rotation around a rectilinear axis" .
+    
+    
+    
+
+
+
