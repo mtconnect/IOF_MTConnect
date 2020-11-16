@@ -38,11 +38,6 @@ mtc:Pressure a owl:Class ;
     rdfs:subClassOf obo:BFO_0000019 ;
     iof:definition-NL "def. a quality that inheres in a bearer in virtue of a force per unit area of a gas or liquid upon the bearer" .
 
-mtc:RotaryVelocity a owl:Class ;
-    mtc:mtconnect-term "RotaryVelocity" ;
-    rdfs:subClassOf obo:BFO_0000019 ;
-    iof:definition-NL "def. a quality that inheres in a bearer in virtue of a rotational speed around an axis of the bearer" .
-
 ## Modality Qualities
 
 mtc:ControllerModality a owl:Class ;

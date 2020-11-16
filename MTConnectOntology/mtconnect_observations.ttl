@@ -54,8 +54,7 @@ mtc:CommandedPositionMeasurementInformationContentEntity a owl:Class ;
 mtc:TargetPositionMeasurementInformationContentEntity a owl:Class ;
     iof:definition-NL "def. The desired end position of the control point." ;    
     rdfs:subClassOf mtc:PositionMeasurementInformationContentEntity ;    
-    mtc:mtconnect-term "Commanded Position" .
-    
+    mtc:mtconnect-term "Commanded Position" .    
 
 mtc:PressureMeasurementInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
@@ -66,6 +65,29 @@ mtc:RotaryVelocityMeasurementInformationContentEntity a owl:Class ;
     rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
     iof:definition-NL "def. The rotational speed of rotary motion system" ;
     mtc:mtconnect-term "Rotary Velocity" .
+
+# Spatial things
+
+mtc:LinearAxialPosition a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000018 ;
+    mtc:mtconnect-term "POSITION" ;
+    iof:definition-NL "def. a zero-dimensional spatial region defined by Linear Motion for the purpose of identifying the a position along one dimension of a Coordinate System's spatial framework and realtive to the coordinate system origin" .
+    
+mtc:RotationalAxialAngle a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000018 ;
+    mtc:mtconnect-term "ANGLE" ;
+    iof:definition-NL "def. a zero-dimensional spatial region defined by Rotary Motion for the purpose of identifying the tha angle around one dimension of a Coordinate System's spatial framework" .
+
+mtc:ControlPointPosition a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000018 ;
+    mtc:mtconnect-term "PATH_POSITION" ;
+    iof:definition-NL "def. a zero-dimensional spatial region defined by the location in three dimensions for the purpose of identifying the point in space of the end point of the motion systems" .
+
+mtc:ControlPoseOrientation a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000026 ;
+    mtc:mtconnect-term "ORIENTATION" ;
+    iof:definition-NL "def. a one-dimensional spatial region defined by the three space orientation given an roll, pitch, and yaw for the purpose of identifying the pose of the end point of the motions systems relative to a Coordinate System's spatial framework." .
+    
 
 
 # Modalities
@@ -249,22 +271,22 @@ mtc:ExecutionOperationalStasis a owl:Class ;
     iof:definition-NL "def. an operational stasis in which some control system is idle or performs an activity" .
     
 mtc:ActiveExecutionOperationalStasis a owl:Class ;
-    rdfs:subClassOf mtc:OperationalStasis ;
+    rdfs:subClassOf mtc:ExecutionOperationalStasis ;
     mtc:mtconnect-term "ACTIVE" ;    
     iof:definition-NL "def. an operational stasis in which some control system is active" .
     
 mtc:ReadyExecutionOperationalStasis a owl:Class ;
-    rdfs:subClassOf mtc:OperationalStasis ;
+    rdfs:subClassOf mtc:ExecutionOperationalStasis ;
     mtc:mtconnect-term "READY" ;    
     iof:definition-NL "def. an operational stasis in which some control system is inactive and ready to begin operation" .
     
 mtc:StoppedExecutionOperationalStasis a owl:Class ;
-    rdfs:subClassOf mtc:OperationalStasis ;    
+    rdfs:subClassOf mtc:ExecutionOperationalStasis ;    
     mtc:mtconnect-term "STOPPED" ;    
     iof:definition-NL "def. an operational stasis in which some control system is inactive and ready to restart operation" .
     
 mtc:PausedExecutionOperationalStasis a owl:Class ;
-    rdfs:subClassOf mtc:OperationalStasis ;
+    rdfs:subClassOf mtc:ExecutionOperationalStasis ;
     mtc:mtconnect-term "FEEDHOLD" ;    
     iof:definition-NL "def. an operational stasis in which some control system is inactive and ready to continue operation" .
 
@@ -284,28 +306,3 @@ mtc:RotaryVelocity a owl:Class ;
     rdfs:subClassOf cco:SpinningMotion ;
     iof:definition-NL "def. a spinning motion of an motion system" .
     
-mtc:LinearPosition a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000144 ;
-    mtc:mtconnect-term "POSITION" ;    
-    iof:definition-NL "def. a process profile representing the position along a rectilinear axis" .
-    
-mtc:ActualLinearPosition a owl:Class ;
-    rdfs:subClassOf mtc:LinearPosition ;
-    mtc:mtconnect-term "POSITION:ACTUAL" ;    
-    iof:definition-NL "def. a process profile of the position along a rectilinear axis as reported by sensors" .    
-    
-mtc:ProgrammedLinearPosition a owl:Class ;
-    rdfs:subClassOf mtc:LinearPosition ;
-    mtc:mtconnect-term "POSITION:PROGRAMMED" ;    
-    iof:definition-NL "def. a process profile representing the directive position along a rectilinear axis" .
-    
-mtc:AngularPosition a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000144 ;
-    mtc:mtconnect-term "Angle" ;    
-    iof:definition-NL "def. a process profile representing the rotation around a rectilinear axis" .
-    
-    
-    
-
-
-
