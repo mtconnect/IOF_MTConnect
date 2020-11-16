@@ -23,16 +23,6 @@
 
 ## Measurement Qualities
 
-mtc:LinearPosition a owl:Class ;
-    mtc:mtconnect-term "Position" ;
-    rdfs:subClassOf obo:BFO_0000019 ;
-    iof:definition-NL "def. a quality that inheres in a bearer in virtue of relative position along an axis of the bearer" .
-    
-mtc:RotaryAngle a owl:Class ;
-    mtc:mtconnect-term "Angle" ;
-    rdfs:subClassOf obo:BFO_0000019 ;
-    iof:definition-NL "def. a quality that inheres in a bearer in virtue of a relative angle around an axis of the bearer" .
-
 mtc:Pressure a owl:Class ;
     mtc:mtconnect-term "Pressure" ;
     rdfs:subClassOf obo:BFO_0000019 ;
